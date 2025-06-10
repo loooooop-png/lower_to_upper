@@ -44,7 +44,7 @@ class TextToUpperApp:
         self.hotkey_label.pack(pady=5)
         
         # 录制按钮
-        self.record_btn = ttk.Button(hotkey_frame, text="开始录制", command=self.toggle_recording)
+        self.record_btn = ttk.Button(hotkey_frame, text="修改热键", command=self.toggle_recording)
         self.record_btn.pack(pady=5)
         
         # 录制状态标签
@@ -122,7 +122,7 @@ class TextToUpperApp:
     
     def stop_recording(self):
         self.is_recording = False
-        self.record_btn.config(text="开始录制")
+        self.record_btn.config(text="修改热键")
         keyboard.unhook_all()
         
         if self.recorded_keys:
